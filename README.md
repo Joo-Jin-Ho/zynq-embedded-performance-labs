@@ -9,6 +9,7 @@ Zybo 보드의 Push Button, DIP Switch, LED 등의 On-board I/O Peripheral을 C 
 
 # 🛠️ 2. Cache Optimization & Loop Tiling
 행렬 곱셈 프로그램을 이용하여 Cache와 Loop Tiling이 프로그램 실행 성능에 미치는 영향을 분석하는 실험입니다. 먼저 일반적인 행렬 곱셈을 수행하는 mat_mul()과 Tile 단위로 행렬을 처리하는 mat_mul_tiling()을 직접 구현하고 두 결과가 동일한지 검증했습니다. 이후 Tile Size를 변경하면서 실행 시간을 측정하고, L1 Data Cache를 Enabled/Disabled한 경우를 각각 비교하였습니다. 평가 조건에서는 컴파일러 최적화 -O2를 사용하고, Tiling 미적용 및 Tile Size 2, 4, 8, 16, 32에 대해 각각 10회 실행 후 평균 실행 시간을 측정하여 Cache와 데이터 접근 지역성의 관계를 분석했습니다. 이를 통해 메모리 접근 패턴이 CPU 성능에 어떤 영향을 주는지 알 수 있었다.
+
 <img width="410" height="250" alt="image" src="https://github.com/user-attachments/assets/b1f1dcd3-d45f-4c8d-a731-370ea1738f35" />
 <img width="410" height="250" alt="image" src="https://github.com/user-attachments/assets/a35751a4-5937-458b-8d0b-5210dd887a7a" />
 
